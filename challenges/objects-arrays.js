@@ -46,7 +46,7 @@ console.log(firstDino.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-firstDino.roar = function(){
+firstDino.roar = () => {
   return 'RAWERSRARARWERSARARARRRR!';
 }
 console.log(firstDino.roar());
@@ -73,7 +73,7 @@ const graduates = [
 
 Once you have the new array created, log the result. */
 const universities = [];
-graduates.forEach(function(value){
+graduates.forEach(value => {
   universities.push(value.university);
 })
 console.log(...universities);
@@ -85,14 +85,14 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
-graduates.forEach(function(value){
+graduates.forEach(value => {
   contactInfo.push(`${value.first_name} ${value.email}`)
 })
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
-graduates.filter(function(value){
+graduates.filter(value => {
   if(value.university.includes('Uni') === true){
     unisWithUni.push(value.university)
   }
@@ -123,7 +123,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach(function(value){
+zooAnimals.forEach(value => {
   displayNames.push(`Name: ${value.animal_name}, Scientific: ${value.scientific_name}.`);
 })
 console.log(displayNames);
@@ -145,7 +145,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
  
-const lowPopulationAnimals = zooAnimals.filter(function(value){
+const lowPopulationAnimals = zooAnimals.filter(value => {
   if(value.population < 5){
     return value;
   }
@@ -159,7 +159,7 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 
-const populationTotal = zooAnimals.reduce(function(total,currentValue,){
+const populationTotal = zooAnimals.reduce((total,currentValue,) => {
   return total + currentValue.population;
 }, 0)
 console.log(populationTotal);
