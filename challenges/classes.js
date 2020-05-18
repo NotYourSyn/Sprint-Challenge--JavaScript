@@ -19,6 +19,18 @@
         return 2*(this.length * this.width + this.length * this.height + this.width * this.height);
       }
   }
+
+  class CubeMaker extends CuboidMaker {
+    constructor(object){
+      super(oject);
+    }
+    cubeSurface(){
+      return 6 * (this.length ** this.height);
+    }
+    cubeVolume(){
+      return Math.pow(this.length,3);
+    }
+  }
 // Test your volume and surfaceArea methods by uncommenting the logs below:
  console.log(cuboid.volume()); // 100
  console.log(cuboid.surfaceArea()); // 130
